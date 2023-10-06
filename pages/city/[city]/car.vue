@@ -1,3 +1,15 @@
+<script setup>
+const route = useRoute();
+
+useHead({
+    title: `${route.params.make ? toCapitalize(route.params.make) : 'Cars'} in ${toCapitalize(route.params.city)}`,
+});
+
+function toCapitalize(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+}
+</script>
+
 <template>
     <NavBar />
     <!-- begin::Car Section -->

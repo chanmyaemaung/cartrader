@@ -1,3 +1,15 @@
+<script setup>
+const route = useRoute();
+
+useHead({
+    title: toCapitalize(route.params.name)
+});
+
+function toCapitalize(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+}
+</script>
+
 <template>
     <NavBar />
 
